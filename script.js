@@ -1,14 +1,15 @@
 (function () {
-  const { titulo, subtitulo, local, projeto, equipe, quadros } = GALERIA;
+  const { titulo, subtitulo, autoria, local, projeto, equipe, quadros } = GALERIA;
   const $ = (id) => document.getElementById(id);
   const doisDigitos = (n) => String(n).padStart(2, "0");
   const ano = new Date().getFullYear();
 
   // Abertura
-  document.title = `${titulo} · ${subtitulo}`;
+  document.title = subtitulo;
   $("marca").textContent = titulo;
   $("titulo").textContent = subtitulo;
   $("ano").textContent = ano;
+  $("autoria").textContent = autoria;
   $("local").textContent = local;
   $("total").textContent = `${quadros.length} pinturas`;
   $("responsavel").textContent = equipe[0] ? equipe[0].nome : "";
