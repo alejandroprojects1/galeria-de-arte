@@ -187,3 +187,33 @@ button { font: inherit; color: inherit; }
   .anterior { left: calc(50% - 3.75rem); }
   .proxima { right: calc(50% - 3.75rem); }
 }
+
+/* Aba atual no menu */
+.barra nav a[aria-current="page"]::after { right: 0; }
+
+/* Link com seta */
+.link-seta { display: inline-flex; gap: .6rem; align-items: center; font-size: .9rem; border-bottom: 1px solid var(--tinta); padding-bottom: .2rem; }
+.link-seta span { transition: transform .3s ease; }
+.link-seta:hover span { transform: translateX(4px); }
+
+/* Página "Sobre o projeto" */
+.sobre-subtitulo { font-family: var(--serif); font-style: italic; font-size: clamp(1.4rem, 3vw, 2.1rem); color: var(--suave); margin: -1.5rem 0 0; }
+.sobre-texto {
+  max-width: 680px; margin: 0 auto; padding: 0 var(--margem);
+  font-size: 1.05rem; line-height: 1.8; box-sizing: content-box;
+}
+.sobre-texto p { margin: 0 0 1.6rem; }
+.sobre-texto .abre { font-family: var(--serif); font-size: clamp(1.45rem, 2.6vw, 1.9rem); line-height: 1.35; margin-bottom: 2.5rem; }
+.sobre-imagem { margin: 3.5rem 0; }
+.sobre-imagem img { width: 100%; box-shadow: var(--sombra); }
+.sobre-fecho {
+  max-width: 900px; margin: 0 auto; padding: clamp(3rem, 8vw, 6rem) var(--margem) clamp(4rem, 9vw, 7rem);
+  text-align: center;
+}
+.sobre-destaque { font-family: var(--serif); font-style: italic; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.2; margin: 0 0 2.5rem; }
+.quem-fez {
+  margin: 0 var(--margem); padding: clamp(4rem, 9vw, 6rem) 0;
+  border-top: 1px solid var(--linha);
+}
+.quem-fez h2 { font-size: clamp(2.2rem, 5vw, 3.5rem); margin-bottom: 2.5rem; }
+.quem-fez .equipe { grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); column-gap: clamp(2rem, 6vw, 5rem); }

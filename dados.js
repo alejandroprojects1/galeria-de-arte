@@ -16,15 +16,29 @@ const GALERIA = {
   autoria: "Estudantes do 4º ano",
   local: "Sesc Porto Seguro · Bahia",
 
+  // Resumo que aparece na página das obras
   projeto: {
-    nome: "O projeto",
+    nome: "Sobre o projeto",
     descricao:
-      "Estas pinturas foram feitas pelos estudantes do 4º ano do Sesc Porto Seguro, " +
-      "em um projeto de pintura conduzido pela professora Gabriela Matos Marinho. " +
-      "O tema foi sugerido pelo professor Neander de Oliveira Souza, que também convidou " +
-      "Gabriela para levar os trabalhos a uma exposição física. " +
-      "As obras foram fotografadas e digitalizadas por Allan Cabral Sousa, " +
-      "e esta galeria virtual foi criada para que os trabalhos possam ser vistos por todos.",
+      "A Mostra de Artes Visuais “Porto Seguro pelos nossos olhares” apresenta as produções artísticas " +
+      "dos estudantes do 4º ano do Ensino Fundamental, em um projeto idealizado, coordenado e orientado " +
+      "por Gabriela Matos.",
+  },
+
+  // Texto completo da aba “Sobre o projeto” (cada item é um parágrafo; *texto* fica em itálico)
+  sobre: {
+    titulo: "Porto Seguro pelos nossos olhares",
+    subtitulo: "Paisagens, cores e memórias do nosso lugar",
+    paragrafos: [
+      "A Mostra de Artes Visuais “Porto Seguro pelos nossos olhares” apresenta as produções artísticas dos estudantes do 4º ano do Ensino Fundamental, em um projeto idealizado, coordenado e orientado por Gabriela Matos.",
+      "Inspirados nas paisagens do Centro Histórico de Porto Seguro, os estudantes produziram pinturas coletivas que retratam elementos marcantes da arquitetura e da memória local, como as casas coloniais, a Capela de São Benedito, a Igreja de Nossa Senhora da Pena, a Casa de Antônio Ricaldi e o Marco do Descobrimento.",
+      "As obras foram realizadas com tinta PVA sobre papel madeira, utilizando molduras confeccionadas com papelão e pó de serra, incorporando o reaproveitamento de materiais ao processo de criação.",
+      "A proposta dialoga com a História e o Teatro, tendo como referência temática a sugestão do professor de História e diretor de teatro Neander Souza, em aproximação com a peça *Memórias de uma Vila*, de sua autoria.",
+      "Integrante da programação da Semana Literária de Porto Seguro 2026, a mostra valoriza a expressão artística infantil, a criatividade, a cooperação e as diferentes maneiras de perceber e representar o território.",
+      "Mais do que retratar paisagens, as obras revelam os olhares das crianças sobre a cidade, transformando referências culturais e arquitetônicas em experiências de criação, memória e identidade.",
+    ],
+    destaque: "Uma exposição de cores, formas e histórias, na qual Porto Seguro é reinventada pelo olhar dos nossos pequenos artistas!",
+    imagem: "imagens/quadros/quadro-03.jpg",
   },
 
   equipe: [

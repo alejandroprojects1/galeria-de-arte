@@ -26,7 +26,8 @@ Para ver no computador, basta abrir `index.html` no navegador.
 ## Estrutura
 
 ```
-index.html      página
+index.html      página das obras
+sobre.html      aba "Sobre o projeto"
 estilo.css      aparência
 script.js       monta a galeria e o visualizador ampliado
 dados.js        ← CONTEÚDO (edite aqui)
