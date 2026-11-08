@@ -1,11 +1,12 @@
 (function () {
-  const { titulo, subtitulo, autora, quadros } = GALERIA;
+  const { titulo, subtitulo, local, projeto, equipe, quadros } = GALERIA;
   const $ = (id) => document.getElementById(id);
 
   document.title = titulo;
   $("titulo").textContent = titulo;
   $("subtitulo").textContent = subtitulo;
-  $("rodape-texto").textContent = `© ${new Date().getFullYear()} ${autora.nome}. Todos os direitos reservados.`;
+  $("local").textContent = local;
+  $("rodape-texto").textContent = `${subtitulo} · ${local} · ${new Date().getFullYear()}`;
 
   // Mostra um aviso no lugar de uma foto que ainda não foi adicionada
   function aoFalhar(img, caminho) {
@@ -17,13 +18,22 @@
     }, { once: true });
   }
 
-  // Autora
-  $("autora-nome").textContent = autora.nome;
-  $("autora-descricao").textContent = autora.descricao;
-  const foto = $("autora-foto");
-  foto.alt = "Foto de " + autora.nome;
-  aoFalhar(foto, autora.foto);
-  foto.src = autora.foto;
+  // Projeto e equipe
+  $("projeto-nome").textContent = projeto.nome;
+  $("projeto-descricao").textContent = projeto.descricao;
+  equipe.forEach((p) => {
+    const card = document.createElement("article");
+    card.className = "pessoa";
+    card.innerHTML = `<img class="pessoa-foto"><div><p class="rotulo"></p><h3></h3><p class="pessoa-descricao"></p></div>`;
+    const img = card.querySelector("img");
+    img.alt = "Foto de " + p.nome;
+    aoFalhar(img, p.foto);
+    img.src = p.foto;
+    card.querySelector(".rotulo").textContent = p.papel;
+    card.querySelector("h3").textContent = p.nome;
+    card.querySelector(".pessoa-descricao").textContent = p.descricao;
+    $("equipe").appendChild(card);
+  });
 
   // Grade de obras
   const ficha = (q) => [q.tecnica, q.ano].filter(Boolean).join(" · ");

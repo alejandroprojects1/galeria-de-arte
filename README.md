@@ -1,13 +1,14 @@
 # Galeria Virtual
 
-Site simples (HTML, CSS e JavaScript, sem instalar nada) para expor 12 quadros, com título, descrição, foto e descrição da autora.
+Galeria virtual com as pinturas dos estudantes do 4º ano do Sesc Porto Seguro (Bahia), do projeto de pintura da professora Gabriela Matos Marinho.
+Site simples (HTML, CSS e JavaScript, sem instalar nada).
 
 ## Como personalizar
 
 1. **Fotos dos quadros** → coloque em `imagens/quadros/` com os nomes `quadro-01.jpg` até `quadro-12.jpg`
    (ou use outros nomes e ajuste no `dados.js`).
-2. **Foto da autora** → coloque em `imagens/autora/autora.jpg`.
-3. **Textos** → abra o arquivo `dados.js` e troque títulos, descrições, nome e biografia da autora.
+2. **Fotos da equipe** → ficam em `imagens/equipe/`.
+3. **Textos** → abra o arquivo `dados.js` e edite títulos, descrições, o texto do projeto e da equipe.
 
 Dica: fotos com até ~2000 px no lado maior e menos de 1 MB carregam rápido.
 Enquanto uma foto não for adicionada, o site mostra um aviso com o nome do arquivo esperado.
@@ -31,5 +32,5 @@ script.js       monta a galeria e o visualizador ampliado
 dados.js        ← CONTEÚDO (edite aqui)
 imagens/
   quadros/      fotos dos quadros
-  autora/       foto da autora
+  equipe/       fotos da equipe
 ```
