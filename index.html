@@ -4,60 +4,69 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Galeria Virtual</title>
+  <meta name="description" content="Pinturas dos estudantes do 4º ano do Sesc Porto Seguro, Bahia.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="estilo.css?v=3">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css?v=4">
 </head>
 <body>
-  <header class="topo">
-    <p class="rotulo">Exposição</p>
-    <h1 id="titulo"></h1>
-    <p id="subtitulo" class="subtitulo"></p>
-    <p id="local" class="local"></p>
+  <header class="barra">
+    <a href="#" id="marca" class="marca"></a>
     <nav>
       <a href="#obras">Obras</a>
-      <a href="#projeto">O projeto</a>
+      <a href="#projeto">Projeto</a>
     </nav>
   </header>
 
   <main>
-    <section id="obras" class="obras">
-      <h2>Obras</h2>
+    <section class="abertura">
+      <p class="rotulo surgir">Exposição virtual · <span id="ano"></span></p>
+      <h1 id="titulo" class="surgir"></h1>
+      <dl class="ficha-expo surgir">
+        <div><dt>Local</dt><dd id="local"></dd></div>
+        <div><dt>Obras</dt><dd id="total"></dd></div>
+        <div><dt>Projeto</dt><dd id="responsavel"></dd></div>
+      </dl>
+    </section>
+
+    <section id="obras" class="obras" aria-label="Obras">
       <div id="grade" class="grade"></div>
     </section>
 
     <section id="projeto" class="projeto">
-      <div class="projeto-intro">
-        <p class="rotulo">Sobre</p>
-        <h2 id="projeto-nome"></h2>
-        <p id="projeto-descricao"></p>
+      <h2 id="projeto-nome" class="surgir"></h2>
+      <div>
+        <p id="projeto-descricao" class="projeto-texto surgir"></p>
+        <div id="equipe" class="equipe"></div>
       </div>
-      <div id="equipe" class="equipe"></div>
     </section>
   </main>
 
   <footer class="rodape">
     <p id="rodape-texto"></p>
+    <a href="#">Voltar ao topo ↑</a>
   </footer>
 
   <!-- Visualizador ampliado -->
-  <div id="visor" class="visor" hidden role="dialog" aria-modal="true" aria-labelledby="visor-titulo">
-    <button class="visor-fechar" aria-label="Fechar">&times;</button>
-    <button class="visor-seta anterior" aria-label="Obra anterior">&#8249;</button>
+  <div id="visor" class="visor" hidden role="dialog" aria-modal="true" aria-label="Obra ampliada">
+    <div class="visor-topo">
+      <span id="visor-numero" class="numero"></span>
+      <button class="visor-fechar" type="button">Fechar <span aria-hidden="true">✕</span></button>
+    </div>
     <figure class="visor-conteudo">
       <img id="visor-img" alt="">
       <figcaption>
-        <p id="visor-numero" class="rotulo"></p>
         <h3 id="visor-titulo"></h3>
         <p id="visor-ficha" class="ficha"></p>
         <p id="visor-descricao"></p>
       </figcaption>
     </figure>
-    <button class="visor-seta proxima" aria-label="Próxima obra">&#8250;</button>
+    <button class="visor-seta anterior" type="button" aria-label="Obra anterior">←</button>
+    <button class="visor-seta proxima" type="button" aria-label="Próxima obra">→</button>
   </div>
 
-  <script src="dados.js?v=3"></script>
-  <script src="script.js?v=3"></script>
+  <script src="dados.js?v=4"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
