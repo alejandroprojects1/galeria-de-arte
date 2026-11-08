@@ -21,6 +21,8 @@ const GALERIA = {
     descricao:
       "Estas pinturas foram feitas pelos estudantes do 4º ano do Sesc Porto Seguro, " +
       "em um projeto de pintura conduzido pela professora Gabriela Matos Marinho. " +
+      "O tema foi sugerido pelo professor Neander de Oliveira Souza, que também convidou " +
+      "Gabriela para levar os trabalhos a uma exposição física. " +
       "As obras foram fotografadas e digitalizadas por Allan Cabral Sousa, " +
       "e esta galeria virtual foi criada para que os trabalhos possam ser vistos por todos.",
   },
@@ -35,12 +37,12 @@ const GALERIA = {
         "Desenvolve este projeto de pintura com seus estudantes.",
     },
     {
-      nome: "Alejandro C. Melgaço",
-      papel: "Galeria virtual",
-      foto: "imagens/equipe/alejandro.jpg",
+      nome: "Neander de Oliveira Souza",
+      papel: "Tema e exposição física",
+      foto: "imagens/equipe/neander.jpg",
       descricao:
-        "Professor de Inclusão Digital no Sesc Porto Seguro, Bahia. " +
-        "Criou esta galeria para colaborar com o projeto e levar os trabalhos dos estudantes para a internet.",
+        "Professor de História do Ensino Fundamental II no Sesc Porto Seguro, Bahia. " +
+        "Sugeriu o tema do projeto à professora Gabriela e a convidou para a exposição física.",
     },
     {
       nome: "Allan Cabral Sousa",
@@ -49,6 +51,14 @@ const GALERIA = {
       descricao:
         "Professor de Inglês no Sesc Porto Seguro, Bahia. " +
         "Colaborou com as fotos que levaram os quadros para o formato digital.",
+    },
+    {
+      nome: "Alejandro C. Melgaço",
+      papel: "Galeria virtual",
+      foto: "imagens/equipe/alejandro.jpg",
+      descricao:
+        "Professor de Inclusão Digital no Sesc Porto Seguro, Bahia. " +
+        "Criou esta galeria para colaborar com o projeto e levar os trabalhos dos estudantes para a internet.",
     },
   ],
 
