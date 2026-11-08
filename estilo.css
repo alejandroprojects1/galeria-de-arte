@@ -217,3 +217,31 @@ button { font: inherit; color: inherit; }
 }
 .quem-fez h2 { font-size: clamp(2.2rem, 5vw, 3.5rem); margin-bottom: 2.5rem; }
 .quem-fez .equipe { grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); column-gap: clamp(2rem, 6vw, 5rem); }
+
+/* Página "Agradecimentos" */
+.faixa {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(.75rem, 2vw, 1.5rem);
+  padding: 0 var(--margem); margin-bottom: clamp(3.5rem, 8vw, 6rem);
+}
+.faixa img { height: clamp(56px, 8vw, 96px); width: auto; box-shadow: var(--sombra); }
+@media (min-width: 901px) {
+  .faixa { flex-wrap: nowrap; max-width: 1300px; margin-left: auto; margin-right: auto; }
+  .faixa img { flex: var(--r, 1.3) 1 0%; min-width: 0; width: 100%; height: auto; }
+}
+.carta {
+  max-width: 640px; margin: 0 auto; padding: 0 var(--margem) clamp(4rem, 10vw, 7rem); box-sizing: content-box;
+  font-family: var(--serif); font-size: clamp(1.3rem, 2.3vw, 1.6rem); line-height: 1.5;
+}
+.carta p { margin: 0 0 1.4rem; }
+.carta-saudacao { font-style: italic; font-size: 1.15em; margin-bottom: 2rem !important; }
+.carta-assinatura { margin-top: 3rem; }
+.carta-assinatura p { margin: 0; }
+.assina { display: flex; align-items: center; gap: 1rem; margin-top: 1.25rem; }
+.assina .pessoa-foto, .assina .sem-imagem { width: 64px; height: 64px; }
+.assina p { font-size: 1.35em; }
+
+/* Menu com três abas no celular */
+@media (max-width: 560px) {
+  .barra { flex-wrap: wrap; row-gap: .75rem; }
+  .barra nav { width: 100%; justify-content: space-between; font-size: .82rem; }
+}

@@ -160,6 +160,40 @@
     });
   }
 
+  // ---------- Página "Agradecimentos" ----------
+  const carta = $("agr-texto");
+  if (carta) {
+    const agr = GALERIA.agradecimentos;
+    document.title = `Agradecimentos · ${titulo}`;
+    texto("agr-titulo", agr.titulo);
+    texto("agr-saudacao", agr.saudacao);
+    texto("agr-despedida", agr.despedida);
+    texto("agr-assinatura", agr.assinatura);
+    agr.paragrafos.forEach((t) => {
+      const p = document.createElement("p");
+      p.className = "surgir";
+      comItalico(p, t);
+      carta.appendChild(p);
+    });
+    const foto = $("agr-foto");
+    foto.alt = "Foto de " + agr.assinatura;
+    aoFalhar(foto, agr.foto);
+    foto.src = agr.foto;
+
+    // Faixa com as pinturas dos estudantes
+    const faixa = $("agr-faixa");
+    quadros.forEach((q) => {
+      const img = document.createElement("img");
+      img.src = q.imagem; img.alt = ""; img.loading = "lazy";
+      img.addEventListener("error", () => img.remove(), { once: true });
+      // Proporção da pintura, para todas caberem numa linha só no computador
+      img.addEventListener("load", () => {
+        img.style.setProperty("--r", (img.naturalWidth / img.naturalHeight).toFixed(3));
+      }, { once: true });
+      faixa.appendChild(img);
+    });
+  }
+
   // Elementos surgem suavemente ao rolar a página
   const surgir = document.querySelectorAll(".surgir");
   if ("IntersectionObserver" in window) {

@@ -41,6 +41,21 @@ const GALERIA = {
     imagem: "imagens/quadros/quadro-03.jpg",
   },
 
+  // Texto da aba “Agradecimentos” (cada item de "paragrafos" é um parágrafo)
+  agradecimentos: {
+    titulo: "Aos nossos pequenos artistas",
+    saudacao: "Queridos estudantes do 4º ano,",
+    paragrafos: [
+      "Esta mostra só existe por causa de vocês. Cada pincelada, cada cor escolhida e cada ideia compartilhada transformou papel madeira e tinta em paisagens cheias de vida.",
+      "Vocês olharam para Porto Seguro com atenção e carinho — as casas coloniais, as igrejas, a Capela de São Benedito, o Marco do Descobrimento — e mostraram que a história da nossa cidade também pode ser contada com cores.",
+      "Obrigada pela dedicação, pela paciência em cada etapa, pela criatividade e, principalmente, pelo trabalho em equipe. Nenhuma dessas pinturas foi feita por uma pessoa só: cada quadro carrega as mãos e os olhares de muitos de vocês. Até as molduras, feitas com papelão e pó de serra, mostram que dá para criar coisas bonitas reaproveitando o que temos.",
+      "Tenho muito orgulho de cada um de vocês. Que continuem olhando para o mundo com essa curiosidade e com essa coragem de criar.",
+    ],
+    despedida: "Com carinho,",
+    assinatura: "Professora Gabriela Matos",
+    foto: "imagens/equipe/gabriela.jpg",
+  },
+
   equipe: [
     {
       nome: "Gabriela Matos Marinho",

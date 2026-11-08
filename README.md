@@ -28,6 +28,7 @@ Para ver no computador, basta abrir `index.html` no navegador.
 ```
 index.html      página das obras
 sobre.html      aba "Sobre o projeto"
+agradecimentos.html  aba "Agradecimentos"
 estilo.css      aparência
 script.js       monta a galeria e o visualizador ampliado
 dados.js        ← CONTEÚDO (edite aqui)
