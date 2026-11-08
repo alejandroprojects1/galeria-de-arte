@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galeria Virtual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <p class="rotulo">Exposição</p>
+    <h1 id="titulo"></h1>
+    <p id="subtitulo" class="subtitulo"></p>
+    <nav>
+      <a href="#obras">Obras</a>
+      <a href="#autora">A artista</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="obras" class="obras">
+      <h2>Obras</h2>
+      <div id="grade" class="grade"></div>
+    </section>
+
+    <section id="autora" class="autora">
+      <img id="autora-foto" class="autora-foto" alt="">
+      <div>
+        <p class="rotulo">A artista</p>
+        <h2 id="autora-nome"></h2>
+        <p id="autora-descricao" class="autora-descricao"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p id="rodape-texto"></p>
+  </footer>
+
+  <!-- Visualizador ampliado -->
+  <div id="visor" class="visor" hidden role="dialog" aria-modal="true" aria-labelledby="visor-titulo">
+    <button class="visor-fechar" aria-label="Fechar">&times;</button>
+    <button class="visor-seta anterior" aria-label="Obra anterior">&#8249;</button>
+    <figure class="visor-conteudo">
+      <img id="visor-img" alt="">
+      <figcaption>
+        <p id="visor-numero" class="rotulo"></p>
+        <h3 id="visor-titulo"></h3>
+        <p id="visor-ficha" class="ficha"></p>
+        <p id="visor-descricao"></p>
+      </figcaption>
+    </figure>
+    <button class="visor-seta proxima" aria-label="Próxima obra">&#8250;</button>
+  </div>
+
+  <script src="dados.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
